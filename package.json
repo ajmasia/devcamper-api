@@ -4,7 +4,7 @@
   "description": "An API for a bootcamp directory",
   "main": "server/app.js",
   "scripts": {
-    "start": "node dist/server",
+    "start": "NODE_ENV=production node dist/server",
     "dev": "nodemon server/app.js",
     "docker:install": "docker-compose run --rm --no-deps server npm i"
   },
