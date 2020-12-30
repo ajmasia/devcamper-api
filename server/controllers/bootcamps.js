@@ -9,7 +9,10 @@ const getBootcamps = (req, res, next) => {
 // @route       GET /api/v1/bootcamps/:id
 // @access      Public
 const getBootcamp = (req, res, next) => {
-  res.status(200).json({ success: true, msg: `Show bootcamp ${req.params.id}` })
+  res.status(200).json({
+    success: true,
+    msg: `Show bootcamp ${req.params.id}`,
+  })
 }
 
 // @desc        CREATE bootcamp
