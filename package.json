@@ -7,7 +7,9 @@
     "start": "NODE_ENV=production node dist/server",
     "dev": "NODE_ENV=development nodemon server/app.js",
     "docker:install": "docker-compose run --rm --no-deps server npm i",
-    "docker:start": "docker-compose up"
+    "docker:start": "docker-compose up",
+    "docker:seed:data": "docker-compose run --rm --no-deps server node seeder -i", 
+    "docker:delete:data": "docker-compose run --rm --no-deps server node seeder -d"
   },
   "repository": {
     "type": "git",
