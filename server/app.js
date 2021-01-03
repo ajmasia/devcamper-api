@@ -4,6 +4,9 @@ const morgan = require('morgan')
 const colors = require('colors')
 const connectDB = require('./config/db')
 
+// Middlewares
+const errorHandler = require('./middleware/errorHandler')
+
 // Routes
 const bootcamps = require('./routes/bootcamps')
 
@@ -26,6 +29,9 @@ if (process.env.NODE_ENV === 'development') {
 
 // Mount routes
 app.use('/api/v1/bootcamps', bootcamps)
+
+// Use middlewares
+app.use(errorHandler)
 
 const PORT = process.env.PORT || 3000
 
