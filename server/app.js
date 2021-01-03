@@ -16,6 +16,9 @@ connectDB()
 // Create an express app
 const app = express()
 
+// Body parser
+app.use(express.json())
+
 // Dev logger middleware
 if (process.env.NODE_ENV === 'development') {
   app.use(morgan('dev'))

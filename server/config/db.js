@@ -41,12 +41,12 @@ const connectionString = getConnectionString({
 
 const connectDB = async () => {
   const connection = await mongoose.connect(connectionString, {
-    userNewUrlParser: true,
+    useNewUrlParser: true,
     useCreateIndex: true,
     useFindAndModify: false,
     useUnifiedTopology: true,
-    useNewUrlParser: true,
   })
+  console.log(connectionString)
   console.log(
     `MongoDB connected: ${connection.connection.host}`.cyan.underline.bold
   )
