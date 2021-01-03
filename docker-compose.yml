@@ -13,18 +13,7 @@ services:
     container_name: devcamper_dev_server
     depends_on:
       - db
-    environment:
-      # - APP_ID=rest-api
-      # - LOG_LEVEL=debug
-      # - REQUEST_LIMIT=100kb
-      # - SESSION_SECRET=mySecret
-      # - SERVER_LOCATION=http://localhost:9000
-      # - SWAGGER_API_SPEC=/spec
-      - PORT=3000
-      - DATABASE_HOST=db
-      - DATABASE_PORT=27017
-      - DATABASE_DATABASE=devcamper_db
-      - NODE_ENV=development
+    env_file: .env
     image: node:14
     ports:
       - "9000:3000"
