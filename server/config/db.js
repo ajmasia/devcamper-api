@@ -45,8 +45,11 @@ const connectDB = async () => {
     useCreateIndex: true,
     useFindAndModify: false,
     useUnifiedTopology: true,
+    useNewUrlParser: true,
   })
-  console.log(`MongoDB connected: ${connection.connection.host}`)
+  console.log(
+    `MongoDB connected: ${connection.connection.host}`.cyan.underline.bold
+  )
 }
 
 module.exports = connectDB
