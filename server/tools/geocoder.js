@@ -1,7 +1,5 @@
 const NodeGeocoder = require('node-geocoder')
 
-if (process.env.NODE_ENV === 'development') require('dotenv').config()
-
 const options = {
   provider: process.env.GEOCODER_PROVIDER,
   httpAdapter: 'https',
