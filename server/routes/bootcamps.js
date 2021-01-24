@@ -15,5 +15,6 @@ router
   .put(controller.updateBootcamp)
   .delete(controller.deleteBootcamp)
 router.route('/radius/:zipcode/:distance').get(controller.getBootcampsInRadius)
+router.route('/:id/photo').put(controller.bootcampPhotoUpload)
 
 module.exports = router

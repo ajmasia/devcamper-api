@@ -1,17 +1,24 @@
-### Node ###
 # Logs
 logs
 *.log
 npm-debug.log*
+
 # Dependency directories
 node_modules/
+
 # Optional npm cache directory
 .npm
+
 # Dotenv environment variables file
 .env
 .env.test
 .env*.local
+
 # Local db
 db/
+
 # Code editors
 .vscode
+
+# public uploads
+public/
