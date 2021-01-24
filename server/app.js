@@ -9,6 +9,7 @@ const errorHandler = require('./middleware/errorHandler')
 
 // Routes
 const bootcamps = require('./routes/bootcamps')
+const courses = require('./routes/courses')
 
 // Get env vars
 dotenv.config()
@@ -29,6 +30,7 @@ if (process.env.NODE_ENV === 'development') {
 
 // Mount routes
 app.use('/api/v1/bootcamps', bootcamps)
+app.use('/api/v1/courses', courses)
 
 // Use middlewares
 app.use(errorHandler)
